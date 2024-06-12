@@ -1,8 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import MantenimientoPrev from "../../public/img/mantenimiento_preventivo.svg";
-import Pintura from "../../public/img/pintura.svg";
+import AutoPlc from "../../public/img/programacion_plc.svg";
 import MantenimientoInd from "../../public/img/machines.svg";
+import MantenimientoEl from "../../public/img/electricity.svg";
+import MantenimientoMotor from "../../public/img/mantenimiento_motor.svg";
+import InstalacionRedes from "../../public/img/electric_networks.svg";
 
 const content = {
   title: "Nuestros servicios",
@@ -10,13 +13,22 @@ const content = {
 
 const products = [
   {
+    label: "Mantenimiento Eléctrico Industrial",
+  },
+  {
     label: "Mantenimiento Preventivo",
   },
   {
-    label: "Pintura",
+    label: "Automatización PLC y HMI",
   },
   {
-    label: "Mantenimiento industrial",
+    label: "Mantenimiento Correctivo",
+  },
+  {
+    label: "Mantenimiento de motores industriales",
+  },
+  {
+    label: "Instalación de redes eléctricas industriales",
   },
 ];
 ---
@@ -26,23 +38,37 @@ const products = [
     class="relative bg-heroBgServices bg-cover bg-center bg-no-repeat flex flex-col justify-center w-full min-h-screen items-center"
   >
     <div
-      class="absolute flex flex-col w-full h-full bg-orange-500 bg-opacity-80 backdrop-blur-sm"
+      class="absolute flex flex-col w-full h-full bg-orange-500 bg-opacity-90 backdrop-blur-sm"
     >
     </div>
-    <div class="relative">
+    <div class="relative w-auto">
       <h1 class="text-center text-5xl m-4 font-bold py-8">{content.title}</h1>
-      <div class="flex flex-col lg:flex-row justify-center">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center w-full gap-4"
+      >
         <div class="flex flex-row justify-center items-center m-6 text-center">
-          <Image src={MantenimientoPrev} alt="" class="max-w-[100px] m-4" />
+          <Image src={MantenimientoEl} alt="" class="max-w-[100px] m-4" />
           <p class="text-2xl">{products[0].label}</p>
         </div>
         <div class="flex flex-row justify-center items-center m-6 text-center">
-          <Image src={Pintura} alt="" class="max-w-[100px] m-4" />
+          <Image src={MantenimientoPrev} alt="" class="max-w-[100px] m-4" />
           <p class="text-2xl">{products[1].label}</p>
         </div>
         <div class="flex flex-row justify-center items-center m-6 text-center">
-          <Image src={MantenimientoInd} alt="" class="max-w-[100px] m-4" />
+          <Image src={AutoPlc} alt="" class="max-w-[100px] m-4" />
           <p class="text-2xl">{products[2].label}</p>
+        </div>
+        <div class="flex flex-row justify-center items-center m-6 text-center">
+          <Image src={MantenimientoInd} alt="" class="max-w-[100px] m-4" />
+          <p class="text-2xl">{products[3].label}</p>
+        </div>
+        <div class="flex flex-row justify-center items-center m-6 text-center">
+          <Image src={MantenimientoMotor} alt="" class="max-w-[100px] m-4" />
+          <p class="text-2xl">{products[4].label}</p>
+        </div>
+        <div class="flex flex-row justify-center items-center m-6 text-center">
+          <Image src={InstalacionRedes} alt="" class="max-w-[100px] m-4" />
+          <p class="text-2xl">{products[5].label}</p>
         </div>
       </div>
     </div>
