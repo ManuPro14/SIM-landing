@@ -1,14 +1,26 @@
+---
+import { Image } from "astro:assets";
+import NavbarImage from "../../public/img/Logo_full.png";
+---
+
 <!--haz un navbar -->
 <div class="bg-orange-500 p-6">
   <nav class="">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:max-lg:flex-col"
     >
-      <a class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a
+        class="flex items-center space-x-3 rtl:space-x-reverse md:flex-col justify-center"
+      >
         <span
           class="tracking-widest px-2 self-center text-5xl font-medium whitespace-nowrap dark:text-white"
-          >SIM</span
         >
+          <Image
+            src={NavbarImage}
+            alt="logo"
+            class="w-[250px] h-[75px] md:m-4"
+          />
+        </span>
       </a>
 
       <!-----
