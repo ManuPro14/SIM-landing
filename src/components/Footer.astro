@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import FooterImage from "../../public/img/Logo_full.png";
+
+const phoneNumber = "573043544404";
+const whatsappLink = `https://wa.me/${phoneNumber}`;
 ---
 
 <footer class="bg-orange-500 rounded-lg shadow dark:bg-gray-900 m-4">
@@ -15,7 +18,7 @@ import FooterImage from "../../public/img/Logo_full.png";
           <Image
             src={FooterImage}
             alt=""
-            class="m-8 max-w-[150px] max-h-[150px]"
+            class="m-4 max-w-[250px] max-h-[250px]"
           />
         </span>
       </a>
@@ -64,8 +67,9 @@ import FooterImage from "../../public/img/Logo_full.png";
 
         <!-- Whatsapp -->
         <button
-          id="whatsapp"
           type="button"
+          id="whatsapp-button"
+          data-whatsapp-link={whatsappLink}
           data-twe-ripple-init
           data-twe-ripple-color="light"
           class="mb-2 inline-block rounded bg-[#128c7e] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
